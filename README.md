@@ -29,6 +29,7 @@ Login to Azure and set the subscription you want to use:
 ```bash
 az login
 az account set --subscription "<subscription-id>"
+```
 
 ## Test the Web Server
 
@@ -38,3 +39,4 @@ After `terraform apply` finishes:
 IP=$(terraform output -raw public_ip)
 echo "Public IP: $IP"
 curl -s "http://$IP" | sed -n '1,5p'
+```
