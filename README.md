@@ -18,7 +18,7 @@ Perfect for demos, labs, or showing your boss something “cloudy.”
 - [Terraform](https://developer.hashicorp.com/terraform/downloads) v1.6 or newer  
 - [Azure CLI](https://learn.microsoft.com/en-us/cli/azure/install-azure-cli) installed and logged in  
 - An active Azure subscription  
-- An SSH key pair (Terraform uses your `~/.ssh/id_rsa.pub` by default)
+- An SSH key pair (Terraform uses your `~/.ssh/id_rsa.pub` by default):
 ```bash
 ssh-keygen -t rsa -b 4096
 ```
