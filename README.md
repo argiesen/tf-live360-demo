@@ -31,6 +31,17 @@ az login
 az account set --subscription "<subscription-id>"
 ```
 
+---
+
+### Run it
+
+```bash
+az login
+az account set --subscription "<subscription-id>"
+terraform init
+terraform apply -auto-approve
+```
+
 ## Test the Web Server
 
 After `terraform apply` finishes:

@@ -13,7 +13,7 @@ write_files:
         <body style="font-family: sans-serif;">
           <h1>It works 🎉</h1>
           <p>This VM was provisioned by Terraform and configured by cloud-init.</p>
-          <p>Host: ${HOSTNAME}</p>
+          <img src="https://miro.medium.com/v2/resize:fit:640/format:webp/0*2-Eyak8AllUybGAN" alt="IaC Meme" />
         </body>
       </html>
 runcmd:

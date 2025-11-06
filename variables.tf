@@ -1,13 +1,13 @@
 variable "prefix" {
   description = "Prefix for all resources"
   type        = string
-  default     = "tf-demo"
+  default     = "tf-live360-demo"
 }
 
 variable "resource_group_name" {
   description = "Name of the resource group"
   type        = string
-  default     = "tf-demo-rg"
+  default     = "tf-live360-demo-rg"
 }
 
 variable "location" {
@@ -19,7 +19,7 @@ variable "location" {
 variable "vnet_name" {
   description = "Name of the virtual network"
   type        = string
-  default     = "tf-demo-vnet"
+  default     = "tf-live360-demo-vnet"
 }
 
 variable "vnet_address_space" {
@@ -31,7 +31,7 @@ variable "vnet_address_space" {
 variable "subnet_name" {
   description = "Subnet name"
   type        = string
-  default     = "tf-demo-subnet"
+  default     = "tf-live360-demo-subnet"
 }
 
 variable "subnet_prefix" {
@@ -55,5 +55,5 @@ variable "admin_username" {
 variable "public_key_path" {
   description = "Path to the SSH public key"
   type        = string
-  default     = "~/.ssh/id_rsa.pub"
+  default     = ".ssh/id_rsa.pub"
 }

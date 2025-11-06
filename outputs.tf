@@ -14,3 +14,8 @@ output "public_ip" {
   value = azurerm_public_ip.demo_pip.ip_address
   description = "Public IP of the demo VM"
 }
+
+output "public_name" {
+  value       = azurerm_public_ip.demo_pip.fqdn
+  description = "FQDN of the public IP"
+}
