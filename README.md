@@ -19,6 +19,9 @@ Perfect for demos, labs, or showing your boss something “cloudy.”
 - [Azure CLI](https://learn.microsoft.com/en-us/cli/azure/install-azure-cli) installed and logged in  
 - An active Azure subscription  
 - An SSH key pair (Terraform uses your `~/.ssh/id_rsa.pub` by default)
+```bash
+ssh-keygen -t rsa -b 4096
+```
 
 ---
 
@@ -40,10 +43,6 @@ az login
 az account set --subscription "<subscription-id>"
 terraform init
 terraform apply -auto-approve
-
-Start-Process "http://$(terraform output -raw public_name)"
-
-terraform destroy -auto-approve
 ```
 
 ---
@@ -53,7 +52,15 @@ terraform destroy -auto-approve
 After `terraform apply` finishes:
 
 ```bash
-IP=$(terraform output -raw public_ip)
-echo "Public IP: $IP"
-curl -s "http://$IP" | sed -n '1,5p'
+Start-Process "http://$(terraform output -raw public_name)"
+```
+
+---
+
+## Clean it up
+
+After your demo, clean up your mess:
+
+```bash
+terraform destroy -auto-approve
 ```
