@@ -40,7 +40,11 @@ az login
 az account set --subscription "<subscription-id>"
 terraform init
 terraform apply -auto-approve
+
+Start-Process msedge.exe "http://$(terraform output -raw public_name)"
 ```
+
+---
 
 ## Test the Web Server
 
