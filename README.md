@@ -41,7 +41,9 @@ az account set --subscription "<subscription-id>"
 terraform init
 terraform apply -auto-approve
 
-Start-Process msedge.exe "http://$(terraform output -raw public_name)"
+Start-Process "http://$(terraform output -raw public_name)"
+
+terraform destroy -auto-approve
 ```
 
 ---
